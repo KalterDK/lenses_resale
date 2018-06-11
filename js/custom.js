@@ -148,7 +148,7 @@ var $window = $(window),
                 $navarrow = ($this.data('nav-arrow')) ? $this.data('nav-arrow') : false,
                 $autoplay = ($this.attr('data-autoplay')) ? $this.data('autoplay') : true,
                 $autospeed = ($this.attr('data-autospeed')) ? $this.data('autospeed') : 5000,
-                $smartspeed = ($this.attr('data-smartspeed')) ? $this.data('smartspeed') : 1000,
+                $smartspeed = ($this.attr('data-smartspeed')) ? $this.data('smartspeed') : 250,
                 $autohgt = ($this.data('autoheight')) ? $this.data('autoheight') : false,
                 $space = ($this.attr('data-space')) ? $this.data('space') : 30;    
            

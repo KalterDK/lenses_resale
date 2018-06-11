@@ -15,6 +15,7 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Patua One', cursive; }
 
 /*navbar*/
 #onepagenav .mega-menu .menu-links > li > a { font-size: 22px; }
+#onepagenav .mega-menu.desktopTopFixed .menu-links > li > a { font-size: 22px; color: #323232; }
 #onepagenav .mega-menu .menu-links > li > a:hover, #onepagenav .mega-menu .menu-links > li.active > a { color: #0245b8 !important; }
 
 /*section-title*/

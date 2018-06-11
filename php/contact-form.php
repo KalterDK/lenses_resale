@@ -30,14 +30,6 @@ if(isset($_POST["action"])) {
 	if ( isset($_POST['message']) && $_POST['message'] == '') {
 		$errmsg .= '<p>Please enter your message.</p>';
 	}
-
-	/* Check Google captch validation */
-	if( isset( $_POST['g-recaptcha-response'] ) ){
-		$error_message = validation_google_captcha( $_POST['g-recaptcha-response'] );
-		if($error_message!=''){
-			$errmsg .= $error_message;
-		}
-	}	
 	
 	$result='';
 	// If there are no errors, send the email
@@ -54,54 +46,3 @@ if(isset($_POST["action"])) {
 	}
 	echo $result;
  }
-
-/*
- * Validate google captch
- */
-function validation_google_captcha( $captch_response){
-
-	/* Replace google captcha secret key*/
-	$captch_secret_key = 'Add your secret key here';
-	
-	$data = array(
-            'secret'   => $captch_secret_key,
-            'response' => $captch_response,
-			'remoteip' => $_SERVER['REMOTE_ADDR']
-        );
-	$verify = curl_init();
-	curl_setopt($verify, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
-	curl_setopt($verify, CURLOPT_POST, true);
-	curl_setopt($verify, CURLOPT_POSTFIELDS, http_build_query($data));
-	curl_setopt($verify, CURLOPT_SSL_VERIFYPEER, false);
-	curl_setopt($verify, CURLOPT_RETURNTRANSFER, true);
-	$response = curl_exec($verify);
-	$response = json_decode( $response, true );
-	$error_message='';
-	if( isset($response['error-codes']) && !empty($response['error-codes'])){
-		if( $response['error-codes'][0] == 'missing-input-secret' ){
-			
-			$error_message = '<p>The recaptcha secret parameter is missing.</p>';
-			
-		}elseif( $response['error-codes'][0] == 'invalid-input-secret' ){
-			
-			$error_message = '<p>The recaptcha secret parameter is invalid or malformed.</p>';
-			
-		}elseif( $response['error-codes'][0] == 'missing-input-response' ){
-			
-			$error_message = '<p>The recaptcha response parameter is missing.</p>';
-			
-		}elseif( $response['error-codes'][0] == 'invalid-input-response' ){
-			
-			$error_message = '<p>The recaptcha response parameter is invalid or malformed.</p>';
-			
-		}elseif( $response['error-codes'][0] == 'bad-request' ){
-			
-			$error_message = '<p>The recaptcha request is invalid or malformed.</p>';
-		}
-	}	
-	if( $error_message !=''){
-		return $error_message;
-	}else{
-		return '';
-	}
-  }
