@@ -168,7 +168,7 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
 .mega-menu .menu-links > li.active .drop-down-multilevel li.active .drop-down-multilevel li.active .drop-down-multilevel li a:hover { color: #84ba3f; }
 .mega-menu .row  { margin-left: 0px; margin-right: 0px; }
 .mega-menu .col-md-12  { padding-left: 0px; padding-right: 0px; }
-.mega-menu.desktopTopFixed .menu-logo { padding: 0px; }
+.mega-menu.desktopTopFixed .menu-logo { padding: 10px; }
 .mega-menu.desktopTopFixed .search-cart i.icon { line-height: 20px; }
 .mega-menu.desktopTopFixed .menu-list-items .menu-logo > li > a img { height: 30px; } 
 .mega-menu .badge  { color: #ffffff; }
@@ -426,7 +426,7 @@ header.one-page.light .navbar-inverse .navbar-nav.hover-effect-01>li>a:hover, he
 .mega-menu > section.menu-list-items > .container,
 .mega-menu > section.menu-list-items > .container > .row,
 .mega-menu > section.menu-list-items > .container > .row > div { height: 100%; }
-.mega-menu > section.menu-list-items .menu-bar {  height: 100%; }
+.mega-menu > section.menu-list-items .menu-bar {  height: 100%; padding: 25px 0 25px; }
 .mega-menu > section.menu-list-items .menu-bar > ul{ display: table !important; height: 100%; }
 .mega-menu > section.menu-list-items .menu-bar > ul > li { display: table-cell; vertical-align: middle; float: none; }
 .mega-menu .drop-down, .mega-menu .drop-down-tab-bar, .mega-menu .drop-down-multilevel { top: 100%; }

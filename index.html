@@ -28,6 +28,7 @@
 
     <!-- Style -->
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/custom.css"/>
 
     <!-- plumber -->
     <link rel="stylesheet" type="text/css" href="demo-one-page/plumber/css/plumber.css"/>
@@ -71,24 +72,12 @@
                                 <!-- menu logo -->
                                 <ul class="menu-logo">
                                     <li>
-                                        <i class="fa fa-phone"></i>&nbsp;<span>+ 38(066) 641-6300 </span>
-                                        &nbsp;&nbsp;&nbsp;<span>+ 38(068) 234-5876 </span>
+                                        <ul class="header-phones">
+                                            <li><i class="fa fa-phone"></i>&nbsp;<span>+ 38 (066) 641-6300 </span></li>
+                                            <li><i class="fa fa-phone"></i>&nbsp;<span>+ 38 (068) 234-5876 </span></li>
+                                        </ul>
                                     </li>
                                 </ul>
-                                <!--<ul class="menu-links">-->
-                                    <!--<li>-->
-                                        <!--<a href="tel:380666416300">-->
-                                            <!--<i class="fa fa-phone"></i>-->
-                                            <!--<span>+ 38(066) 641-6300 </span>-->
-                                        <!--</a>-->
-                                    <!--</li>-->
-                                    <!--<li>-->
-                                        <!--<a href="tel:380682345876">-->
-                                            <!--<i class="fa fa-phone"></i>-->
-                                            <!--<span>+ 38(068) 234-5876 </span>-->
-                                        <!--</a>-->
-                                    <!--</li>-->
-                                <!--</ul>-->
                                 <!-- menu links -->
                                 <div class="menu-bar">
                                     <ul class="menu-links">
@@ -125,8 +114,8 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="slider-content-text text-center">
-                        <h1 class="text-black">Cooper vision Biofinity</h1>
-                        <a class="button white mt-20 move" href="#contact-us">Купить сейчас</a>
+                        <h1 class="text-white">Cooper vision Biofinity</h1>
+                        <a class="button custom mt-20 move" href="#contact-us">Купить сейчас</a>
                     </div>
                 </div>
             </div>
@@ -277,7 +266,7 @@
                     <h4 class="text-white">Закажите только сейчас <span
                             class="theme-color"> со скидкой 10%! </span></h4>
                     <p class="text-white">У нас всегда есть привлекательные предложения для наших клиентов.</p>
-                    <a class="button button-border white" href="#">
+                    <a class="button button-border white" href="#contact-us">
                         <span>Заказать</span>
                     </a>
                 </div>
@@ -365,26 +354,7 @@
                          data-sm-items="1" data-xs-items="1">
                         <div class="item">
                             <div class="testimonial theme-bg bottom_pos">
-                                <div class="testimonial-avatar"><img alt=""
-                                                                     src="demo-one-page/plumber/images/team/01.jpg">
-                                </div>
-                                <div class="testimonial-info"><p class="text-black"> Большое спасибо за оперативную
-                                    отправку заказа, и квалифицированную консультацию. У вас дешевле всего, и хороший
-                                    сервис, буду заказывать еще. Спасибо! </p></div>
-                                <div class="author-info"><strong>Олег Бойко- <span>Заказчик с olx.ua</span></strong>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimonial theme-bg bottom_pos">
-                                <div class="testimonial-avatar"><img alt=""
-                                                                     src="demo-one-page/plumber/images/team/02.jpg">
-                                </div>
-                                <div class="testimonial-info"><p class="text-black"> Был приятно удивлен ценой и уровнем
-                                    сервиса воспользовавшись заказом с этого сайта. Буду заказывать у вас в дальнейшем.
-                                    Всем привет из Одессы! </p></div>
-                                <div class="author-info"><strong>Андрей Бондарь -
-                                    <span>Заказчик с olx.ua</span></strong></div>
+
                             </div>
                         </div>
                     </div>
@@ -405,44 +375,37 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="plumber-contact-bg">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 sm-mb-40">
-                                <div class="contact-3-info">
-                                    <div class="clearfix">
-                                        <div id="formmessage">Success/Error Message Goes Here</div>
-                                        <form id="contactform" role="form" method="post" action="php/contact-form.php">
-                                            <div class="contact-form clearfix">
-                                                <div class="section-field">
-                                                    <input id="name" type="text" placeholder="Имя*"
-                                                           class="form-control" name="name">
-                                                </div>
-                                                <div class="section-field">
-                                                    <input type="email" placeholder="Электронная почта*" class="form-control"
-                                                           name="email">
-                                                </div>
-                                                <div class="section-field">
-                                                    <input type="text" placeholder="Номер телефона*" class="form-control"
-                                                           name="phone">
-                                                </div>
-                                                <div class="section-field textarea">
+                        <div class="contact-3-info">
+                            <div class="clearfix">
+                                <div id="formmessage">Success/Error Message Goes Here</div>
+                                <form id="contactform" role="form" method="post" action="php/contact-form.php">
+                                    <div class="contact-form clearfix">
+                                        <div class="section-field">
+                                            <input id="name" type="text" placeholder="Имя*"
+                                                   class="form-control" name="name">
+                                        </div>
+                                        <div class="section-field">
+                                            <input type="email" placeholder="Электронная почта*" class="form-control"
+                                                   name="email">
+                                        </div>
+                                        <div class="section-field">
+                                            <input type="text" placeholder="Номер телефона*" class="form-control"
+                                                   name="phone">
+                                        </div>
+                                        <div class="section-field textarea">
                                                     <textarea class="input-message form-control"
                                                               placeholder="Укажите количество линз и диоптрию (например: 12 линз -1,5)."
                                                               rows="7" name="message"></textarea>
-                                                </div>
-                                                <input type="hidden" name="action" value="sendEmail"/>
-                                                <button id="submit" name="submit" type="submit" value="Send"
-                                                        class="button"><span> Отправить заказ </span> <i
-                                                        class="fa fa-paper-plane"></i></button>
-                                            </div>
-                                        </form>
-                                        <div id="ajaxloader" style="display:none"><img
-                                                class="mx-auto mt-30 mb-30 d-block"
-                                                src="images/pre-loader/loader-02.svg" alt=""></div>
+                                        </div>
+                                        <input type="hidden" name="action" value="sendEmail"/>
+                                        <button id="submit" name="submit" type="submit" value="Send"
+                                                class="button"><span> Отправить заказ </span> <i
+                                                class="fa fa-paper-plane"></i></button>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                               <img class="img-responsive" src="demo-one-page/plumber/images/logo2.png" alt="logo">
+                                </form>
+                                <div id="ajaxloader" style="display:none"><img
+                                        class="mx-auto mt-30 mb-30 d-block"
+                                        src="images/pre-loader/loader-02.svg" alt=""></div>
                             </div>
                         </div>
                     </div>
@@ -465,9 +428,12 @@
                     <p class="mt-20"> Комфорт клиента - ценность которой мы руководствуемся с 2009 года.</p>
                     <div class="social-icons medium social-border rounded color-hover clearfix mt-20">
                         <ul>
-                            <li class="social-instagram"><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li class="social-facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li class="social-twitter"><a href="#"><i class="fa fa-vk"></i></a></li>
+                            <li class="social-instagram"><a href="https://www.instagram.com/linzy_ukraine/"><i
+                                    class="fa fa-instagram"></i></a></li>
+                            <li class="social-facebook"><a href="https://www.facebook.com/groups/supermarket.linz/"><i
+                                    class="fa fa-facebook"></i></a></li>
+                            <li class="social-twitter"><a href="https://vk.com/linzy_ua"><i class="fa fa-vk"></i></a>
+                            </li>
                         </ul>
                     </div>
                 </div>

@@ -543,6 +543,7 @@ h5 {font-size: 15px;}
 /*home-1*/
 /*header*/
 .default { position: relative; background: #323232; }
+.header-phones { color: #f7cb1d; }
 /*menu*/
 .mega-menu { min-height: 60px; }
 .mega-menu .menu-logo > li > a { padding: 0; }
