@@ -7,6 +7,8 @@
     <meta name="description" content="Webster - Responsive Multi-purpose HTML5 Template"/>
     <meta name="author" content="potenzaglobalsolutions.com"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <!--<meta property="fb:app_id" content="182157069171409" />-->
+    <!--<meta property="fb:admins" content="dmitry.katsel.9"/>-->
     <title>Biofinity - супермаркет линз</title>
 
     <!-- Favicon -->
@@ -42,6 +44,17 @@
 </head>
 
 <body>
+
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v3.0';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
 
 <div class="wrapper">
 
@@ -280,7 +293,7 @@
     <!--=================================
     reviews -->
 
-    <section id="reviews" class="plumber-work-process split-section theme-bg page-section-ptb">
+    <section class="plumber-work-process split-section theme-bg page-section-ptb">
         <div class="side-background">
             <div class="col-lg-6 img-side img-left">
                 <div class="img-holder img-cover" data-jarallax='{"speed": 0.6}'
@@ -337,8 +350,8 @@
     <!--=================================
      testimonial -->
 
-    <section class="testimonial-plumber page-section-ptb bg-overlay-blue parallax" data-jarallax='{"speed": 0.6}'
-             style="background: url(images/bg/01.jpg);">
+    <section id="reviews" class="testimonial-plumber page-section-ptb bg-overlay-blue parallax" data-jarallax='{"speed": 0.6}'
+             style="background: url(images/bg/01.jpg) no-repeat center center fixed;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
@@ -353,8 +366,10 @@
                     <div class="owl-carousel" data-nav-dots="true" data-items="1" data-lg-items="1" data-md-items="1"
                          data-sm-items="1" data-xs-items="1">
                         <div class="item">
-                            <div class="testimonial theme-bg bottom_pos">
-
+                            <div class="testimonial white-bg bottom_pos">
+                                <div class="fb-comments" data-href="http://supermarketlinz.com.ua/"
+                                     data-width="100%" data-numposts="5" data-order-by="reverse_time">
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -4,10 +4,10 @@ if(isset($_POST["action"])) {
 	$email = $_POST['email'];      // Sender's email address
 	$phone  = $_POST['phone'];     // Sender's phone number
 	$message = $_POST['message'];  // Sender's message
-	$headers = 'From: Demo Contact Form <demo@domain.com>' . "\r\n";
+	$headers = 'From: Contact Form <contact-form@supermarketlinz.com.ua>' . "\r\n";
 
-	$to = 'demo@domain.com';     // Recipient's email address
-	$subject = 'Message from Webster Contact Demo '; // Message title
+	$to = 'contact@webmaerd.com';     // Recipient's email address
+	$subject = 'Message from Contact Form '; // Message title
 
 	$body = " From: $name \n E-Mail: $email \n Phone : $phone \n Message : $message"  ;
 	
