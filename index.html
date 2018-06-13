@@ -400,16 +400,32 @@
                                                    class="form-control" name="name">
                                         </div>
                                         <div class="section-field">
-                                            <input type="email" placeholder="Электронная почта*" class="form-control"
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <input type="email" placeholder="Электронная почта*" class="form-control"
                                                    name="email">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input type="text" placeholder="Номер телефона*" class="form-control"
+                                                   name="phone">
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="section-field">
-                                            <input type="text" placeholder="Номер телефона*" class="form-control"
-                                                   name="phone">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <input type="text" placeholder="Количество линз*" class="form-control"
+                                                   name="lenses">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input type="text" placeholder="Диоптрия*" class="form-control"
+                                                   name="diopters">
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="section-field textarea">
                                                     <textarea class="input-message form-control"
-                                                              placeholder="Укажите количество линз и диоптрию (например: 12 линз -1,5)."
+                                                              placeholder="Ваше сообщение (не обязательно)"
                                                               rows="7" name="message"></textarea>
                                         </div>
                                         <input type="hidden" name="action" value="sendEmail"/>
