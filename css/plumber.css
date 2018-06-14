@@ -5,13 +5,13 @@ Design and Developed by: potenzaglobalsolutions.com
 
 NOTE: This file contains the styling for the Plumber Template. You can edit/add anything in this file!
 */
-body { font-family: 'Patua One', cursive; font-size: 16px; }
-h1, h2, h3, h4, h5, h6 { font-family: 'Patua One', cursive; }
+body { font-family: 'Tahoma', cursive; font-size: 16px; }
+h1, h2, h3, h4, h5, h6 { font-family: 'Tahoma', cursive; }
 
 .bg-overlay-theme-90:before {  background: rgba(255,210,0, 0.9); content: ""; height: 100%; left: 0; position: absolute; top: 0; width: 100%; z-index: 0; }
 .form-control { border-radius: 0; }
 
-.button { border-radius: 0; text-transform: uppercase; font-family: 'Patua One', cursive; font-size: 18px; }
+.button { border-radius: 0; text-transform: uppercase; font-family: 'Tahoma', cursive; font-size: 18px; }
 
 /*navbar*/
 #onepagenav .mega-menu .menu-links > li > a { font-size: 22px; }
