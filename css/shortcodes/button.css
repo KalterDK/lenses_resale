@@ -15,8 +15,8 @@ NOTE: This file contains button CSS.
 button { transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; }
 .button.black { background: #353535; color: #ffffff; border:2px solid #353535;}
 .button.black:hover, .button.black.active, .button.black:focus { background: #84ba3f; color: #ffffff; border-color: #84ba3f; }
-.button.custom { background: #0245b8; color: #ffffff; border:2px solid #032969;}
-.button.custom:hover, .button.custom.active, .button.custom:focus { background: #2a76f9; color: #ffffff; border-color: #032969; }
+.button.custom-btn { background: #0245b8; color: #ffffff; border:2px solid #032969;}
+.button.custom-btn:hover, .button.custom.active, .button.custom:focus { background: #2a76f9; color: #ffffff; border-color: #032969; }
 .button.gray { background: #e0e0e0; color: #353535; border:2px solid #e0e0e0; }
 .button.gray:hover, .button.gray.active, .button.gray:focus { background: #84ba3f; color: #ffffff; border-color: #84ba3f;}
 .button.white { background: #fff; color: #84ba3f; border-color: #ffffff; }

@@ -19,10 +19,6 @@ if(isset($_POST["action"])) {
 	if (isset($_POST['name']) && $_POST['name'] == '') {
 		$errmsg .= '<p>Пожалуйста укажите ваше имя.</p>';
 	}
-	// Check if email has been entered and is valid
-	if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-		$errmsg .= '<p>Пожалуйста укажите ваш действительный e-mail.</p>';
-	}
 	//Check if phone number has been entered
 	if ( isset($_POST['phone']) && $_POST['phone'] == '') {
 		$errmsg .= '<p>Пожалуйста укажите ваш номер телефона.</p>';
