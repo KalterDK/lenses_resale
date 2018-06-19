@@ -1470,7 +1470,7 @@ ul.page-breadcrumb { padding-top: 30px;}
 .book-banner .slider-content-image .text { height: 180px; }
 .book-banner .slider-content-text h2, .book-banner .slider-content-text p { display: none; }
 .book-banner .slider-content-image .text { display: none; }
-.plumber-banner .slider-content-image img { height: 500px; }
+.plumber-banner .slider-content-image img { height: 400px; }
 .plumber-contact-bg { margin-top: 60px; }
 .product-banner .slider-content h1 { font-size: 50px; line-height: 50px; }
 .product-video .product-video-box .vertical-align { padding: 30px; }
@@ -2177,7 +2177,7 @@ h2 {font-size: 22px; line-height: 30px;}
 .maintenance-main h1 { font-size: 30px; }
 .modal-shop { padding: 50px 20px; }
 .plumber-banner .slider-content-text { right: 0 }
-.plumber-banner .slider-content-image img { height: 250px; }
+.plumber-banner .slider-content-image img { height: 280px; }
 .plumber-banner .slider-content-image { left: 10%; }
 .plumber-contact-bg { padding: 0px; }
 .search-no-result { padding-top: 0px; }
