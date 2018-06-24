@@ -6,9 +6,9 @@ if(isset($_POST["action"])) {
 	$lenses = $_POST['lenses'];     // Number of lenses
 	$diopters = $_POST['diopters']; // Diopters
 	$message = $_POST['message'];   // Sender's message
-	$headers = 'From: Contact Form <contact-form@supermarketlinz.com.ua>' . "\r\n";
+	$headers = 'From: Contact Form <supermarketlinz@gmail.com>' . "\r\n";
 
-	$to = 'chikanchi.alex@gmail.com';        // Recipient's email address
+	$to = 'supermarketlinz@gmail.com';        // Recipient's email address
 	$subject = 'Message from Contact Form '; // Message title
 
 	$body = " From: $name \n E-Mail : $email \n Phone: $phone \n\n Lenses: $lenses \n Diopters: $diopters \n\n Message : $message"  ;
