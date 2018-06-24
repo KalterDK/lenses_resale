@@ -69,6 +69,6 @@ NOTE: This file contains Features box CSS.
 .feature-box:hover:before, .feature-box.active:before { background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0; color: #fff; content: ""; display: inline-block; height: 100%;
   left: 0; position: absolute; top: 0; width: 100%; z-index: 1;  -webkit-transition: all 0.3s ease-out 0s; -moz-transition: all 0.3s ease-out 0s; -ms-transition: all 0.3s ease-out 0s; -o-transition: all 0.3s ease-out 0s; transition: all 0.3s ease-out 0s; }
 
-@media (min-width: 1000px) and (max-width: 1150px) {
+@media (min-width: 990px) and (max-width: 1150px) {
     .feature-box {  height: 500px; }
 }
