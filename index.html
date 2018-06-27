@@ -51,6 +51,9 @@
 }(document, 'script', 'facebook-jssdk'));
 
 
+
+
+
 </script>
 
 <div class="wrapper" style="font-family: Tahoma;">
@@ -335,120 +338,348 @@
                             <p class="clearfix">
                             <h3 class="text-blue" style="font-family: Tahoma;">Формуляр заказа:</h3>
                             <br>
-                            <div id="formmessage"></div>
-                            <form id="contactform" role="form" method="post" action="php/contact-form.php">
-                                <div class="contact-form clearfix">
-                                    <div class="section-field">
-                                        <input id="name" type="text" placeholder="Имя*"
-                                               class="form-control" name="name">
-                                    </div>
-                                    <div class="section-field">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <input type="email" placeholder="Электронная почта*"
-                                                       class="form-control"
-                                                       name="email">
-                                            </div>
-                                            <div class="col-md-6">
-                                                <input type="text" placeholder="Номер телефона*" class="form-control"
-                                                       name="phone">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="section-field">
-                                        <div class="row">
-                                            <div class="col-md-2 align">
-                                                <label for="radius">Радиус</label>
-                                                <select name="radius" id="radius" class="form-control">
-                                                    <option value="8.6">8.6</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-2 align">
-                                                <label for="radius">Оптическая сила</label>
-                                                <select name="optics" id="optics" class="form-control">
-                                                    <option value="-12.00">-12.00</option>
-                                                    <option value="-11.50">-11.50</option>
-                                                    <option value="-11.00">-11.00</option>
-                                                    <option value="-10.50">-10.50</option>
-                                                    <option value="-10.00">-10.00</option>
-                                                    <option value="-9.50">-9.50</option>
-                                                    <option value="-9.00">-9.00</option>
-                                                    <option value="-8.50">-8.50</option>
-                                                    <option value="-8.00">-8.00</option>
-                                                    <option value="-7.50">-7.50</option>
-                                                    <option value="-7.00">-7.00</option>
-                                                    <option value="-6.50">-6.50</option>
-                                                    <option value="-6.00">-6.00</option>
-                                                    <option value="-5.75">-5.75</option>
-                                                    <option value="-5.50">-5.50</option>
-                                                    <option value="-5.25">-5.25</option>
-                                                    <option value="-5.00">-5.00</option>
-                                                    <option value="-4.75">-4.75</option>
-                                                    <option value="-4.50">-4.50</option>
-                                                    <option value="-4.25">-4.25</option>
-                                                    <option value="-4.00">-4.00</option>
-                                                    <option value="-3.75">-3.75</option>
-                                                    <option value="-3.50">-3.50</option>
-                                                    <option value="-3.25">-3.25</option>
-                                                    <option value="-3.00">-3.00</option>
-                                                    <option value="-2.75">-2.75</option>
-                                                    <option value="-2.50">-2.50</option>
-                                                    <option value="-2.25">-2.25</option>
-                                                    <option value="-2.00">-2.00</option>
-                                                    <option value="-1.75">-1.75</option>
-                                                    <option value="-1.50">-1.50</option>
-                                                    <option value="-1.25">-1.25</option>
-                                                    <option value="-1.00">-1.00</option>
-                                                    <option value="-0.75">-0.75</option>
-                                                    <option value="-0.50">-0.50</option>
-                                                    <option value="+0.50">+0.50</option>
-                                                    <option value="+1.00">+1.00</option>
-                                                    <option value="+1.50">+1.50</option>
-                                                    <option value="+2.00">+2.00</option>
-                                                    <option value="+2.50">+2.50</option>
-                                                    <option value="+3.00">+3.00</option>
-                                                    <option value="+3.50">+3.50</option>
-                                                    <option value="+4.00">+4.00</option>
-                                                    <option value="+4.50">+4.50</option>
-                                                    <option value="+5.00">+5.00</option>
-                                                    <option value="+5.50">+5.50</option>
-                                                    <option value="+6.00">+6.00</option>
-                                                    <option value="+7.00">+7.00</option>
-                                                    <option value="+8.00">+8.00</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-2 align">
-                                                <label for="radius">Тип упаковки</label>
-                                                <select name="package_type" id="package_type" class="form-control" onmouseup="prices_f()">
-                                                    <option value="1">1 шт</option>
-                                                    <option value="3">3 шт</option>
-                                                    <option value="6">6 шт</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <div class="amount">
-                                                    <span class="down">-</span>
-                                                    <input id="amount" name="amount" type="text" value="1"/>
-                                                    <span class="up">+</span>
+                            <div class="tab round">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active show" id="one-tab" data-toggle="tab"
+                                           href="#one" role="tab" aria-controls="one"
+                                           aria-selected="true">Одинаковые</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="more-tab" data-toggle="tab" href="#more"
+                                           role="tab" aria-controls="more" aria-selected="false">Разные</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade active show" id="one" role="tabpanel"
+                                         aria-labelledby="one-tab">
+                                        <div id="formmessage"></div>
+                                        <form id="contactform" role="form" method="post" action="php/contact-form.php">
+                                            <div class="contact-form clearfix">
+                                                <div class="section-field">
+                                                    <input id="name" type="text" placeholder="Имя*"
+                                                           class="form-control" name="name">
                                                 </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <p class="total_price">Цена: <span id="price"></span> грн.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="section-field textarea">
+                                                <div class="section-field">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <input type="email" placeholder="Электронная почта*"
+                                                                   class="form-control"
+                                                                   name="email">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <input type="text" placeholder="Номер телефона*"
+                                                                   class="form-control"
+                                                                   name="phone">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="section-field">
+                                                    <div class="row">
+                                                        <div class="col-md-2 align">
+                                                            <label for="radius">Радиус</label>
+                                                            <select name="radius" id="radius" class="form-control">
+                                                                <option value="8.6">8.6</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-2 align">
+                                                            <label for="radius">Оптическая сила</label>
+                                                            <select name="optics" id="optics" class="form-control">
+                                                                <option value="-12.00">-12.00</option>
+                                                                <option value="-11.50">-11.50</option>
+                                                                <option value="-11.00">-11.00</option>
+                                                                <option value="-10.50">-10.50</option>
+                                                                <option value="-10.00">-10.00</option>
+                                                                <option value="-9.50">-9.50</option>
+                                                                <option value="-9.00">-9.00</option>
+                                                                <option value="-8.50">-8.50</option>
+                                                                <option value="-8.00">-8.00</option>
+                                                                <option value="-7.50">-7.50</option>
+                                                                <option value="-7.00">-7.00</option>
+                                                                <option value="-6.50">-6.50</option>
+                                                                <option value="-6.00">-6.00</option>
+                                                                <option value="-5.75">-5.75</option>
+                                                                <option value="-5.50">-5.50</option>
+                                                                <option value="-5.25">-5.25</option>
+                                                                <option value="-5.00">-5.00</option>
+                                                                <option value="-4.75">-4.75</option>
+                                                                <option value="-4.50">-4.50</option>
+                                                                <option value="-4.25">-4.25</option>
+                                                                <option value="-4.00">-4.00</option>
+                                                                <option value="-3.75">-3.75</option>
+                                                                <option value="-3.50">-3.50</option>
+                                                                <option value="-3.25">-3.25</option>
+                                                                <option value="-3.00">-3.00</option>
+                                                                <option value="-2.75">-2.75</option>
+                                                                <option value="-2.50">-2.50</option>
+                                                                <option value="-2.25">-2.25</option>
+                                                                <option value="-2.00">-2.00</option>
+                                                                <option value="-1.75">-1.75</option>
+                                                                <option value="-1.50">-1.50</option>
+                                                                <option value="-1.25">-1.25</option>
+                                                                <option value="-1.00">-1.00</option>
+                                                                <option value="-0.75">-0.75</option>
+                                                                <option value="-0.50">-0.50</option>
+                                                                <option value="+0.50">+0.50</option>
+                                                                <option value="+1.00">+1.00</option>
+                                                                <option value="+1.50">+1.50</option>
+                                                                <option value="+2.00">+2.00</option>
+                                                                <option value="+2.50">+2.50</option>
+                                                                <option value="+3.00">+3.00</option>
+                                                                <option value="+3.50">+3.50</option>
+                                                                <option value="+4.00">+4.00</option>
+                                                                <option value="+4.50">+4.50</option>
+                                                                <option value="+5.00">+5.00</option>
+                                                                <option value="+5.50">+5.50</option>
+                                                                <option value="+6.00">+6.00</option>
+                                                                <option value="+7.00">+7.00</option>
+                                                                <option value="+8.00">+8.00</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-2 align">
+                                                            <label for="radius">Тип упаковки</label>
+                                                            <select name="package_type" id="package_type"
+                                                                    class="form-control"
+                                                                    onmouseup="prices_f()">
+                                                                <option value="1">1 шт</option>
+                                                                <option value="3">3 шт</option>
+                                                                <option value="6">6 шт</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="amount">
+                                                                <span class="down">-</span>
+                                                                <input id="amount" name="amount" type="text" value="1"/>
+                                                                <span class="up">+</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <p class="total_price">Цена: <span id="price"></span> грн.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="section-field textarea">
                                                     <textarea class="input-message form-control"
                                                               placeholder="Ваше сообщение (не обязательно)"
                                                               rows="7" name="message"></textarea>
+                                                </div>
+                                                <input type="hidden" name="action" value="sendEmail"/>
+                                                <button id="submit" name="submit" type="submit" value="Send"
+                                                        class="button"><span style="font-family: Tahoma;"> Отправить заказ </span>
+                                                    <i class="fa fa-paper-plane"></i></button>
+                                            </div>
+                                        </form>
                                     </div>
-                                    <input type="hidden" name="action" value="sendEmail"/>
-                                    <button id="submit" name="submit" type="submit" value="Send"
-                                            class="button"><span style="font-family: Tahoma;"> Отправить заказ </span>
-                                        <i
-                                                class="fa fa-paper-plane"></i></button>
+                                    <div class="tab-pane fade" id="more" role="tabpanel"
+                                         aria-labelledby="more-tab">
+                                        <div id="formmessage"></div>
+                                        <form id="contactform" role="form" method="post" action="php/contact-form.php">
+                                            <div class="contact-form clearfix">
+                                                <div class="section-field">
+                                                    <input id="name" type="text" placeholder="Имя*"
+                                                           class="form-control" name="name">
+                                                </div>
+                                                <div class="section-field">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <input type="email" placeholder="Электронная почта*"
+                                                                   class="form-control"
+                                                                   name="email">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <input type="text" placeholder="Номер телефона*"
+                                                                   class="form-control"
+                                                                   name="phone">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="section-field">
+                                                    <h4>Левый</h4>
+                                                    <div class="row">
+                                                        <div class="col-md-2 align">
+                                                            <label for="radius">Радиус</label>
+                                                            <select name="radius" id="radius" class="form-control">
+                                                                <option value="8.6">8.6</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-2 align">
+                                                            <label for="radius">Оптическая сила</label>
+                                                            <select name="optics" id="optics" class="form-control">
+                                                                <option value="-12.00">-12.00</option>
+                                                                <option value="-11.50">-11.50</option>
+                                                                <option value="-11.00">-11.00</option>
+                                                                <option value="-10.50">-10.50</option>
+                                                                <option value="-10.00">-10.00</option>
+                                                                <option value="-9.50">-9.50</option>
+                                                                <option value="-9.00">-9.00</option>
+                                                                <option value="-8.50">-8.50</option>
+                                                                <option value="-8.00">-8.00</option>
+                                                                <option value="-7.50">-7.50</option>
+                                                                <option value="-7.00">-7.00</option>
+                                                                <option value="-6.50">-6.50</option>
+                                                                <option value="-6.00">-6.00</option>
+                                                                <option value="-5.75">-5.75</option>
+                                                                <option value="-5.50">-5.50</option>
+                                                                <option value="-5.25">-5.25</option>
+                                                                <option value="-5.00">-5.00</option>
+                                                                <option value="-4.75">-4.75</option>
+                                                                <option value="-4.50">-4.50</option>
+                                                                <option value="-4.25">-4.25</option>
+                                                                <option value="-4.00">-4.00</option>
+                                                                <option value="-3.75">-3.75</option>
+                                                                <option value="-3.50">-3.50</option>
+                                                                <option value="-3.25">-3.25</option>
+                                                                <option value="-3.00">-3.00</option>
+                                                                <option value="-2.75">-2.75</option>
+                                                                <option value="-2.50">-2.50</option>
+                                                                <option value="-2.25">-2.25</option>
+                                                                <option value="-2.00">-2.00</option>
+                                                                <option value="-1.75">-1.75</option>
+                                                                <option value="-1.50">-1.50</option>
+                                                                <option value="-1.25">-1.25</option>
+                                                                <option value="-1.00">-1.00</option>
+                                                                <option value="-0.75">-0.75</option>
+                                                                <option value="-0.50">-0.50</option>
+                                                                <option value="+0.50">+0.50</option>
+                                                                <option value="+1.00">+1.00</option>
+                                                                <option value="+1.50">+1.50</option>
+                                                                <option value="+2.00">+2.00</option>
+                                                                <option value="+2.50">+2.50</option>
+                                                                <option value="+3.00">+3.00</option>
+                                                                <option value="+3.50">+3.50</option>
+                                                                <option value="+4.00">+4.00</option>
+                                                                <option value="+4.50">+4.50</option>
+                                                                <option value="+5.00">+5.00</option>
+                                                                <option value="+5.50">+5.50</option>
+                                                                <option value="+6.00">+6.00</option>
+                                                                <option value="+7.00">+7.00</option>
+                                                                <option value="+8.00">+8.00</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-2 align">
+                                                            <label for="radius">Тип упаковки</label>
+                                                            <select name="package_type" id="package_type"
+                                                                    class="form-control"
+                                                                    onmouseup="prices_f()">
+                                                                <option value="1">1 шт</option>
+                                                                <option value="3">3 шт</option>
+                                                                <option value="6">6 шт</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="amount">
+                                                                <span class="down">-</span>
+                                                                <input id="amount" name="amount" type="text" value="1"/>
+                                                                <span class="up">+</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <p class="total_price">Цена: <span id="price"></span> грн.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="section-field">
+                                                    <h4>Правый</h4>
+                                                    <div class="row">
+                                                        <div class="col-md-2 align">
+                                                            <label for="radius">Радиус</label>
+                                                            <select name="radius" id="radius" class="form-control">
+                                                                <option value="8.6">8.6</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-2 align">
+                                                            <label for="radius">Оптическая сила</label>
+                                                            <select name="optics" id="optics" class="form-control">
+                                                                <option value="-12.00">-12.00</option>
+                                                                <option value="-11.50">-11.50</option>
+                                                                <option value="-11.00">-11.00</option>
+                                                                <option value="-10.50">-10.50</option>
+                                                                <option value="-10.00">-10.00</option>
+                                                                <option value="-9.50">-9.50</option>
+                                                                <option value="-9.00">-9.00</option>
+                                                                <option value="-8.50">-8.50</option>
+                                                                <option value="-8.00">-8.00</option>
+                                                                <option value="-7.50">-7.50</option>
+                                                                <option value="-7.00">-7.00</option>
+                                                                <option value="-6.50">-6.50</option>
+                                                                <option value="-6.00">-6.00</option>
+                                                                <option value="-5.75">-5.75</option>
+                                                                <option value="-5.50">-5.50</option>
+                                                                <option value="-5.25">-5.25</option>
+                                                                <option value="-5.00">-5.00</option>
+                                                                <option value="-4.75">-4.75</option>
+                                                                <option value="-4.50">-4.50</option>
+                                                                <option value="-4.25">-4.25</option>
+                                                                <option value="-4.00">-4.00</option>
+                                                                <option value="-3.75">-3.75</option>
+                                                                <option value="-3.50">-3.50</option>
+                                                                <option value="-3.25">-3.25</option>
+                                                                <option value="-3.00">-3.00</option>
+                                                                <option value="-2.75">-2.75</option>
+                                                                <option value="-2.50">-2.50</option>
+                                                                <option value="-2.25">-2.25</option>
+                                                                <option value="-2.00">-2.00</option>
+                                                                <option value="-1.75">-1.75</option>
+                                                                <option value="-1.50">-1.50</option>
+                                                                <option value="-1.25">-1.25</option>
+                                                                <option value="-1.00">-1.00</option>
+                                                                <option value="-0.75">-0.75</option>
+                                                                <option value="-0.50">-0.50</option>
+                                                                <option value="+0.50">+0.50</option>
+                                                                <option value="+1.00">+1.00</option>
+                                                                <option value="+1.50">+1.50</option>
+                                                                <option value="+2.00">+2.00</option>
+                                                                <option value="+2.50">+2.50</option>
+                                                                <option value="+3.00">+3.00</option>
+                                                                <option value="+3.50">+3.50</option>
+                                                                <option value="+4.00">+4.00</option>
+                                                                <option value="+4.50">+4.50</option>
+                                                                <option value="+5.00">+5.00</option>
+                                                                <option value="+5.50">+5.50</option>
+                                                                <option value="+6.00">+6.00</option>
+                                                                <option value="+7.00">+7.00</option>
+                                                                <option value="+8.00">+8.00</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-2 align">
+                                                            <label for="radius">Тип упаковки</label>
+                                                            <select name="package_type" id="package_type"
+                                                                    class="form-control"
+                                                                    onmouseup="prices_f()">
+                                                                <option value="1">1 шт</option>
+                                                                <option value="3">3 шт</option>
+                                                                <option value="6">6 шт</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="amount">
+                                                                <span class="down">-</span>
+                                                                <input id="amount" name="amount" type="text" value="1"/>
+                                                                <span class="up">+</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <p class="total_price">Цена: <span id="price"></span> грн.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="section-field textarea">
+                                                    <textarea class="input-message form-control"
+                                                              placeholder="Ваше сообщение (не обязательно)"
+                                                              rows="7" name="message"></textarea>
+                                                </div>
+                                                <input type="hidden" name="action" value="sendEmail"/>
+                                                <button id="submit" name="submit" type="submit" value="Send"
+                                                        class="button"><span style="font-family: Tahoma;"> Отправить заказ </span>
+                                                    <i class="fa fa-paper-plane"></i></button>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
-                            </form>
+                            </div>
                             <div id="ajaxloader" style="display:none"><img
                                     class="mx-auto mt-30 mb-30 d-block"
                                     src="images/pre-loader/loader-02.svg" alt=""></div>
