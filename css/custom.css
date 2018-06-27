@@ -18,3 +18,40 @@
 .align {
     text-align: center;
 }
+
+#radius, #optics, #package_type {
+    text-align: center;
+}
+
+.amount {
+	margin: 40px auto;
+}
+.amount span {
+	display:inline-block;
+	width:20px;
+	height:30px;
+	background:#fff;
+	cursor:pointer;
+	text-align:center;
+	vertical-align:middle;
+}
+.amount span:hover {
+	background:#dfdfdf;
+}
+.amount input {
+	width:30px;
+	text-align:center;
+}
+
+.down, .up {
+font-weight: bold;
+}
+
+.total_price {
+    font-size: 20px;
+    margin: 40px 0;
+}
+
+#price {
+    font-weight: bold;
+}
