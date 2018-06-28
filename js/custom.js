@@ -194,33 +194,33 @@ POTENZA.raindrops = function () {
 *************************/
  POTENZA.contactform = function () {
       $( "#contactform-1" ).submit(function( event ) {
-          $("#ajaxloader-1").show();
+          $("#ajaxloader").show();
           $("#contactform-1").hide();
           $.ajax({
             url:'php/contact-form-1.php',
             data:$(this).serialize(),
             type:'post',
             success:function(response){
-              $("#ajaxloader-1").hide();
+              $("#ajaxloader").hide();
               $("#contactform-1").show();
               
-              $("#formmessage-1").html(response).show().delay(20000).fadeOut('slow');
+              $("#formmessage").html(response).show().delay(20000).fadeOut('slow');
             }
           });
           event.preventDefault();
         });
       $( "#contactform-2" ).submit(function( event ) {
-          $("#ajaxloader-2").show();
+          $("#ajaxloader").show();
           $("#contactform-2").hide();
           $.ajax({
             url:'php/contact-form-2.php',
             data:$(this).serialize(),
             type:'post',
             success:function(response){
-              $("#ajaxloader-2").hide();
+              $("#ajaxloader").hide();
               $("#contactform-2").show();
 
-              $("#formmessage-2").html(response).show().delay(20000).fadeOut('slow');
+              $("#formmessage").html(response).show().delay(20000).fadeOut('slow');
             }
           });
           event.preventDefault();
@@ -1116,6 +1116,9 @@ $(document).ready(function() {
         return false;
     });
 
-    var price = $('.total_price span').text();
-    $('#total_price_input-1').val(price);
+    var price_1 = $('.total_price span').text();
+    $('#total_price_input-1').val(price_1);
+
+    var price_2 = $('.total_price span').text();
+    $('#total_price_input-2').val(price_2);
 });

@@ -16,7 +16,7 @@ if(isset($_POST["action"])) {
 	$to = 'supermarketlinz@gmail.com';        // Recipient's email address
 	$subject = 'Order from Contact Form '; // Message title
 
-	$body = " From: $name \n Phone: $phone \n\n Radius (left eye): $radius_left \n Diopters (left eye): $optics_left \n Package Type (left eye): $package_type_left" \n Amount (left eye): $amount_left \n\n Radius (right eye): $radius_right \n Diopters (right eye): $optics_right \n Package Type (right eye): $package_type_right" \n Amount (right eye): $amount_right \n\n Price: $price ";
+	$body = " From: $name \n Phone: $phone \n\n Radius (left eye): $radius_left \n Diopters (left eye): $optics_left \n Package Type (left eye): $package_type_left \n Amount (left eye): $amount_left \n\n Radius (right eye): $radius_right \n Diopters (right eye): $optics_right \n Package Type (right eye): $package_type_right \n Amount (right eye): $amount_right \n\n Price: $price ";
 
 	// init error message
 	$errmsg='';

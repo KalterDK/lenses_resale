@@ -12,7 +12,7 @@ if(isset($_POST["action"])) {
 	$to = 'supermarketlinz@gmail.com';        // Recipient's email address
 	$subject = 'Order from Contact Form '; // Message title
 
-	$body = " From: $name \n Phone: $phone \n\n Radius: $radius \n Diopters: $optics \n Package Type: $package_type" \n Amount: $amount \n\n Price: $price ";
+	$body = " From: $name \n Phone: $phone \n\n Radius: $radius \n Diopters: $optics \n Package Type: $package_type \n Amount: $amount \n\n Price: $price" ;
 	
 	// init error message
 	$errmsg='';
