@@ -197,7 +197,7 @@ POTENZA.raindrops = function () {
           $("#ajaxloader-1").show();
           $("#contactform-1").hide();
           $.ajax({
-            url:'php/contact-form.php',
+            url:'php/contact-form-1.php',
             data:$(this).serialize(),
             type:'post',
             success:function(response){
@@ -213,7 +213,7 @@ POTENZA.raindrops = function () {
           $("#ajaxloader-2").show();
           $("#contactform-2").hide();
           $.ajax({
-            url:'php/contact-form.php',
+            url:'php/contact-form-2.php',
             data:$(this).serialize(),
             type:'post',
             success:function(response){
