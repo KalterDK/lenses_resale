@@ -193,18 +193,34 @@ POTENZA.raindrops = function () {
   PHP Contact Form 
 *************************/
  POTENZA.contactform = function () {
-      $( "#contactform" ).submit(function( event ) {
-          $("#ajaxloader").show();
-          $("#contactform").hide();
+      $( "#contactform-1" ).submit(function( event ) {
+          $("#ajaxloader-1").show();
+          $("#contactform-1").hide();
           $.ajax({
             url:'php/contact-form.php',
             data:$(this).serialize(),
             type:'post',
             success:function(response){
-              $("#ajaxloader").hide();
-              $("#contactform").show();
+              $("#ajaxloader-1").hide();
+              $("#contactform-1").show();
               
-              $("#formmessage").html(response).show().delay(20000).fadeOut('slow');
+              $("#formmessage-1").html(response).show().delay(20000).fadeOut('slow');
+            }
+          });
+          event.preventDefault();
+        });
+      $( "#contactform-2" ).submit(function( event ) {
+          $("#ajaxloader-2").show();
+          $("#contactform-2").hide();
+          $.ajax({
+            url:'php/contact-form.php',
+            data:$(this).serialize(),
+            type:'post',
+            success:function(response){
+              $("#ajaxloader-2").hide();
+              $("#contactform-2").show();
+
+              $("#formmessage-2").html(response).show().delay(20000).fadeOut('slow');
             }
           });
           event.preventDefault();
@@ -1051,20 +1067,52 @@ var _arr  = {};
 })(jQuery);
 
 $(document).ready(function() {
-    $('.down').click(function () {
+    $('.down-1').click(function () {
         var $input = $(this).parent().find('input');
         var count = parseInt($input.val()) - 1;
         count = count < 1 ? 1 : count;
         $input.val(count);
         $input.change();
-        prices_f()
+        prices_f_1()
         return false;
     });
-    $('.up').click(function () {
+    $('.up-1').click(function () {
         var $input = $(this).parent().find('input');
         $input.val(parseInt($input.val()) + 1);
         $input.change();
-        prices_f()
+        prices_f_1()
+        return false;
+    });
+    $('.down-2-1').click(function () {
+        var $input = $(this).parent().find('input');
+        var count = parseInt($input.val()) - 1;
+        count = count < 1 ? 1 : count;
+        $input.val(count);
+        $input.change();
+        prices_f_2()
+        return false;
+    });
+    $('.up-2-1').click(function () {
+        var $input = $(this).parent().find('input');
+        $input.val(parseInt($input.val()) + 1);
+        $input.change();
+        prices_f_2()
+        return false;
+    });
+    $('.down-2-2').click(function () {
+        var $input = $(this).parent().find('input');
+        var count = parseInt($input.val()) - 1;
+        count = count < 1 ? 1 : count;
+        $input.val(count);
+        $input.change();
+        prices_f_2()
+        return false;
+    });
+    $('.up-2-2').click(function () {
+        var $input = $(this).parent().find('input');
+        $input.val(parseInt($input.val()) + 1);
+        $input.change();
+        prices_f_2()
         return false;
     });
 });

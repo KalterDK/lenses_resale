@@ -26,6 +26,7 @@
     <!-- Style -->
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <link rel="stylesheet" type="text/css" href="css/custom.css"/>
+    <link rel="stylesheet" type="text/css" href="css/modal-form.css"/>
 
     <!-- plumber -->
     <link rel="stylesheet" type="text/css" href="css/plumber.css"/>
@@ -49,6 +50,10 @@
   js.src = 'https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v3.0';
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+
+
+
+
 
 
 
@@ -338,6 +343,7 @@
                             <p class="clearfix">
                             <h3 class="text-blue" style="font-family: Tahoma;">Формуляр заказа:</h3>
                             <br>
+                            <div id="formmessage"></div>
                             <div class="tab round">
                                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                                     <li class="nav-item">
@@ -353,38 +359,20 @@
                                 <div class="tab-content" id="myTabContent">
                                     <div class="tab-pane fade active show" id="one" role="tabpanel"
                                          aria-labelledby="one-tab">
-                                        <div id="formmessage"></div>
-                                        <form id="contactform" role="form" method="post" action="php/contact-form.php">
+                                        <form id="contactform-1" role="form" method="post"
+                                              action="php/contact-form-1.php">
                                             <div class="contact-form clearfix">
                                                 <div class="section-field">
-                                                    <input id="name" type="text" placeholder="Имя*"
-                                                           class="form-control" name="name">
-                                                </div>
-                                                <div class="section-field">
                                                     <div class="row">
-                                                        <div class="col-md-6">
-                                                            <input type="email" placeholder="Электронная почта*"
-                                                                   class="form-control"
-                                                                   name="email">
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <input type="text" placeholder="Номер телефона*"
-                                                                   class="form-control"
-                                                                   name="phone">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="section-field">
-                                                    <div class="row">
-                                                        <div class="col-md-2 align">
-                                                            <label for="radius">Радиус</label>
-                                                            <select name="radius" id="radius" class="form-control">
+                                                        <div class="col-lg-2 col-md-4 col-sm-3 align">
+                                                            <label for="radius-1">Радиус</label>
+                                                            <select name="radius" id="radius-1" class="form-control">
                                                                 <option value="8.6">8.6</option>
                                                             </select>
                                                         </div>
-                                                        <div class="col-md-2 align">
-                                                            <label for="radius">Оптическая сила</label>
-                                                            <select name="optics" id="optics" class="form-control">
+                                                        <div class="col-lg-3 col-md-4 col-sm-5 align">
+                                                            <label for="optics-1">Оптическая сила</label>
+                                                            <select name="optics" id="optics-1" class="form-control">
                                                                 <option value="-12.00">-12.00</option>
                                                                 <option value="-11.50">-11.50</option>
                                                                 <option value="-11.00">-11.00</option>
@@ -436,58 +424,74 @@
                                                                 <option value="+8.00">+8.00</option>
                                                             </select>
                                                         </div>
-                                                        <div class="col-md-2 align">
-                                                            <label for="radius">Тип упаковки</label>
-                                                            <select name="package_type" id="package_type"
+                                                        <div class="col-lg-2 col-md-4 col-sm-4 align">
+                                                            <label for="package_type-1">Тип упаковки</label>
+                                                            <select name="package_type" id="package_type-1"
                                                                     class="form-control"
-                                                                    onmouseup="prices_f()">
+                                                                    onmouseup="prices_f_1()">
                                                                 <option value="1">1 шт</option>
                                                                 <option value="3">3 шт</option>
                                                                 <option value="6">6 шт</option>
                                                             </select>
                                                         </div>
-                                                        <div class="col-md-2">
+                                                        <div class="col-lg-2 col-md-3 col-sm-3 align">
+                                                            <label for="amount-1">Кол-во</label>
                                                             <div class="amount">
-                                                                <span class="down">-</span>
-                                                                <input id="amount" name="amount" type="text" value="1"/>
-                                                                <span class="up">+</span>
+                                                                <span class="down-1">-</span>
+                                                                <input id="amount-1" name="amount" type="text"
+                                                                       value="1"/>
+                                                                <span class="up-1">+</span>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-4">
-                                                            <p class="total_price">Цена: <span id="price"></span> грн.
+                                                        <div class="col-lg-3 col-md-9 col-sm-9">
+                                                            <p class="total_price"><span id="price-1"></span> грн.
                                                             </p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="section-field textarea">
-                                                    <textarea class="input-message form-control"
-                                                              placeholder="Ваше сообщение (не обязательно)"
-                                                              rows="7" name="message"></textarea>
-                                                </div>
                                                 <input type="hidden" name="action" value="sendEmail"/>
-                                                <button id="submit" name="submit" type="submit" value="Send"
-                                                        class="button"><span style="font-family: Tahoma;"> Отправить заказ </span>
-                                                    <i class="fa fa-paper-plane"></i></button>
+                                                    <button id="open_modal_form" name="submit" type="submit" value="Send"
+                                                            class="button"><span style="font-family: Tahoma;">Купить в 1 клик</span>
+                                                        <i class="fa fa-paper-plane"></i></button>
+                                                <div id="modal_form">
+                                                    <div class="section-field">
+                                                        <span id="modal_close">X</span>
+                                                        <div class="row modal-padding-10">
+                                                            <div class="col-md-12">
+                                                                <input type="text" placeholder="Номер телефона*"
+                                                                       class="form-control" name="phone">
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <input type="text" placeholder="Имя*"
+                                                                       class="form-control" name="name">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button id="submit-1" name="submit" type="submit" value="Send"
+                                                            class="button"><span style="font-family: Tahoma;">Купить</span>
+                                                        <i class="fa fa-paper-plane"></i></button>
+                                                </div>
+
                                             </div>
                                         </form>
                                     </div>
                                     <div class="tab-pane fade" id="more" role="tabpanel"
                                          aria-labelledby="more-tab">
-                                        <div id="formmessage"></div>
-                                        <form id="contactform" role="form" method="post" action="php/contact-form.php">
+                                        <form id="contactform" role="form" method="post"
+                                              action="php/contact-form-2.php">
                                             <div class="contact-form clearfix">
                                                 <div class="section-field">
-                                                    <input id="name" type="text" placeholder="Имя*"
-                                                           class="form-control" name="name">
-                                                </div>
-                                                <div class="section-field">
                                                     <div class="row">
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-4">
+                                                            <input type="text" placeholder="Имя*"
+                                                                   class="form-control" name="name">
+                                                        </div>
+                                                        <div class="col-md-4">
                                                             <input type="email" placeholder="Электронная почта*"
                                                                    class="form-control"
                                                                    name="email">
                                                         </div>
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-4">
                                                             <input type="text" placeholder="Номер телефона*"
                                                                    class="form-control"
                                                                    name="phone">
@@ -495,17 +499,20 @@
                                                     </div>
                                                 </div>
                                                 <div class="section-field">
-                                                    <h4>Левый</h4>
                                                     <div class="row">
-                                                        <div class="col-md-2 align">
-                                                            <label for="radius">Радиус</label>
-                                                            <select name="radius" id="radius" class="form-control">
+                                                        <div class="col-lg-1 col-sm-12 align">
+                                                            <br>
+                                                            <h4 class="mg-top-20">Левый</h4>
+                                                        </div>
+                                                        <div class="col-lg-2 col-md-4 col-sm-3 align">
+                                                            <label for="radius-2-1">Радиус</label>
+                                                            <select name="radius" id="radius-2-1" class="form-control">
                                                                 <option value="8.6">8.6</option>
                                                             </select>
                                                         </div>
-                                                        <div class="col-md-2 align">
-                                                            <label for="radius">Оптическая сила</label>
-                                                            <select name="optics" id="optics" class="form-control">
+                                                        <div class="col-lg-3 col-md-4 col-sm-5 align">
+                                                            <label for="optics-2-1">Оптическая сила</label>
+                                                            <select name="optics" id="optics-2-1" class="form-control">
                                                                 <option value="-12.00">-12.00</option>
                                                                 <option value="-11.50">-11.50</option>
                                                                 <option value="-11.00">-11.00</option>
@@ -557,41 +564,44 @@
                                                                 <option value="+8.00">+8.00</option>
                                                             </select>
                                                         </div>
-                                                        <div class="col-md-2 align">
-                                                            <label for="radius">Тип упаковки</label>
-                                                            <select name="package_type" id="package_type"
+                                                        <div class="col-lg-2 col-md-4 col-sm-4 align">
+                                                            <label for="package_type-2-1">Тип упаковки</label>
+                                                            <select name="package_type" id="package_type-2-1"
                                                                     class="form-control"
-                                                                    onmouseup="prices_f()">
+                                                                    onmouseup="prices_f_2()">
                                                                 <option value="1">1 шт</option>
                                                                 <option value="3">3 шт</option>
                                                                 <option value="6">6 шт</option>
                                                             </select>
                                                         </div>
-                                                        <div class="col-md-2">
+                                                        <div class="col-lg-2 col-md-3 col-sm-3 align">
+                                                            <label for="amount-2-1">Кол-во</label>
                                                             <div class="amount">
-                                                                <span class="down">-</span>
-                                                                <input id="amount" name="amount" type="text" value="1"/>
-                                                                <span class="up">+</span>
+                                                                <span class="down-2-1">-</span>
+                                                                <input id="amount-2-1" name="amount" type="text"
+                                                                       value="1"/>
+                                                                <span class="up-2-1">+</span>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-4">
-                                                            <p class="total_price">Цена: <span id="price"></span> грн.
-                                                            </p>
+                                                        <div class="col-lg-2 col-md-9 col-sm-9">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="section-field">
-                                                    <h4>Правый</h4>
                                                     <div class="row">
-                                                        <div class="col-md-2 align">
-                                                            <label for="radius">Радиус</label>
-                                                            <select name="radius" id="radius" class="form-control">
+                                                        <div class="col-lg-1 col-sm-12 align">
+                                                            <br>
+                                                            <h4 class="mg-top-20">Правый</h4>
+                                                        </div>
+                                                        <div class="col-lg-2 col-md-4 col-sm-3 align">
+                                                            <label for="radius-2-2">Радиус</label>
+                                                            <select name="radius" id="radius-2-2" class="form-control">
                                                                 <option value="8.6">8.6</option>
                                                             </select>
                                                         </div>
-                                                        <div class="col-md-2 align">
-                                                            <label for="radius">Оптическая сила</label>
-                                                            <select name="optics" id="optics" class="form-control">
+                                                        <div class="col-lg-3 col-md-4 col-sm-5 align">
+                                                            <label for="optics-2-2">Оптическая сила</label>
+                                                            <select name="optics" id="optics-2-2" class="form-control">
                                                                 <option value="-12.00">-12.00</option>
                                                                 <option value="-11.50">-11.50</option>
                                                                 <option value="-11.00">-11.00</option>
@@ -643,36 +653,33 @@
                                                                 <option value="+8.00">+8.00</option>
                                                             </select>
                                                         </div>
-                                                        <div class="col-md-2 align">
-                                                            <label for="radius">Тип упаковки</label>
-                                                            <select name="package_type" id="package_type"
+                                                        <div class="col-lg-2 col-md-4 col-sm-4 align">
+                                                            <label for="package_type-2-2">Тип упаковки</label>
+                                                            <select name="package_type" id="package_type-2-2"
                                                                     class="form-control"
-                                                                    onmouseup="prices_f()">
+                                                                    onmouseup="prices_f_2()">
                                                                 <option value="1">1 шт</option>
                                                                 <option value="3">3 шт</option>
                                                                 <option value="6">6 шт</option>
                                                             </select>
                                                         </div>
-                                                        <div class="col-md-2">
+                                                        <div class="col-lg-2 col-md-3 col-sm-3 align">
+                                                            <label for="amount-2-2">Кол-во</label>
                                                             <div class="amount">
-                                                                <span class="down">-</span>
-                                                                <input id="amount" name="amount" type="text" value="1"/>
-                                                                <span class="up">+</span>
+                                                                <span class="down-2-2">-</span>
+                                                                <input id="amount-2-2" name="amount" type="text"
+                                                                       value="1"/>
+                                                                <span class="up-2-2">+</span>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-4">
-                                                            <p class="total_price">Цена: <span id="price"></span> грн.
+                                                        <div class="col-lg-2 col-md-9 col-sm-9">
+                                                            <p class="total_price"><span id="price-2"></span> грн.
                                                             </p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="section-field textarea">
-                                                    <textarea class="input-message form-control"
-                                                              placeholder="Ваше сообщение (не обязательно)"
-                                                              rows="7" name="message"></textarea>
-                                                </div>
                                                 <input type="hidden" name="action" value="sendEmail"/>
-                                                <button id="submit" name="submit" type="submit" value="Send"
+                                                <button id="submit-2" name="submit" type="submit" value="Send"
                                                         class="button"><span style="font-family: Tahoma;"> Отправить заказ </span>
                                                     <i class="fa fa-paper-plane"></i></button>
                                             </div>
@@ -774,6 +781,7 @@
 <!-- custom -->
 <script src="js/custom.js"></script>
 <script src="js/prices.js"></script>
+<script src="js/modal-form.js"></script>
 
 
 </body>

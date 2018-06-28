@@ -23,9 +23,6 @@
     text-align: center;
 }
 
-.amount {
-	margin: 40px auto;
-}
 .amount span {
 	display:inline-block;
 	width:20px;
@@ -41,6 +38,8 @@
 .amount input {
 	width:30px;
 	text-align:center;
+	color: #0245b8;
+	margin-top: 8px;
 }
 
 .down, .up {
@@ -48,10 +47,15 @@ font-weight: bold;
 }
 
 .total_price {
-    font-size: 20px;
+    font-size: 25px;
     margin: 40px 0;
+    color: #0245b8;
 }
 
 #price {
     font-weight: bold;
+}
+
+.mg-top-20 {
+    margin-top: 20px;
 }
