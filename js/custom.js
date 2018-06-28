@@ -1115,4 +1115,7 @@ $(document).ready(function() {
         prices_f_2()
         return false;
     });
+
+    var price = $('.total_price span').text();
+    $('#total_price_input-1').val(price);
 });

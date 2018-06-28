@@ -1,21 +1,44 @@
 #modal_form {
-	width: 300px;
-	height: 300px;
+	width: 800px;
+	height: 120px;
 	border-radius: 5px;
-	border: 3px #000 solid;
+	border: 1px #1a57bf solid;
 	background: #fff;
-	position: fixed;
-	top: 45%;
-	left: 50%;
-	margin-top: -150px;
-	margin-left: -150px;
+	position: absolute;
+	top: 0;
 	display: none;
 	opacity: 0;
 	z-index: 5;
 	padding: 20px 10px;
+	box-shadow: 0 0 5px 5px;
 }
 
 #modal_form #modal_close {
+	width: 21px;
+	height: 21px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	display: block;
+}
+
+#modal_form-2 {
+	width: 800px;
+	height: 120px;
+	border-radius: 5px;
+	border: 1px #1a57bf solid;
+	background: #fff;
+	position: absolute;
+	top: 0;
+	display: none;
+	opacity: 0;
+	z-index: 5;
+	padding: 20px 10px;
+	box-shadow: 0 0 5px 5px;
+}
+
+#modal_form-2 #modal_close-2 {
 	width: 21px;
 	height: 21px;
 	position: absolute;
