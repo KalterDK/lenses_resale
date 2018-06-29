@@ -7,12 +7,13 @@ if(isset($_POST["action"])) {
 	$package_type = $_POST['package_type']; // Package Type
 	$amount = $_POST['amount'];             // Amount
 	$price = $_POST['total_price_input-1']; // Price
-	$headers = 'From: Contact Form <supermarketlinz@gmail.com>' . "\r\n";
+
+	$headers = 'From: Contact Form <supermarketlinz@gmail.com>' . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-type: text/html; charset=utf-8';
 
 	$to = 'supermarketlinz@gmail.com';        // Recipient's email address
 	$subject = 'Order from Contact Form '; // Message title
 
-	$body = " From: $name \n Phone: $phone \n\n Radius: $radius \n Diopters: $optics \n Package Type: $package_type \n Amount: $amount \n\n Price: $price" ;
+	$body = nl2br(" Имя: $name \n Телефон: $phone \n\n Радиус: $radius \n Оптическая сила: $optics \n Тип упаковки: $package_type \n Количество: $amount \n\n  Цена: $price грн.") ;
 	
 	// init error message
 	$errmsg='';

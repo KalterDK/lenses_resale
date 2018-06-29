@@ -11,12 +11,13 @@ if(isset($_POST["action"])) {
 	$amount_left = $_POST['amount_left'];               // Amount Left
 	$amount_right = $_POST['amount_right'];             // Amount Right
 	$price = $_POST['total_price_input-2'];             // Price
-	$headers = 'From: Contact Form <supermarketlinz@gmail.com>' . "\r\n";
 
-	$to = 'supermarketlinz@gmail.com';        // Recipient's email address
-	$subject = 'Order from Contact Form '; // Message title
+	$headers = 'From: Contact Form <supermarketlinz@gmail.com>' . "\r\n" . 'MIME-Version: 1.0' . "\r\n" . 'Content-type: text/html; charset=utf-8';
 
-	$body = " From: $name \n Phone: $phone \n\n Radius (left eye): $radius_left \n Diopters (left eye): $optics_left \n Package Type (left eye): $package_type_left \n Amount (left eye): $amount_left \n\n Radius (right eye): $radius_right \n Diopters (right eye): $optics_right \n Package Type (right eye): $package_type_right \n Amount (right eye): $amount_right \n\n Price: $price ";
+	$to = 'supermarketlinz@gmail.com';                  // Recipient's email address
+	$subject = 'Order from Contact Form ';              // Message title
+
+	$body = nl2br(" Имя: $name \n Телефон: $phone \n\n Радиус (левый глаз): $radius_left \n Оптическая сила (левый глаз): $optics_left \n Тип упаковки (левый глаз): $package_type_left \n Количество (левый глаз): $amount_left \n\n Радиус (правый глаз): $radius_right \n Оптическая сила (правый глаз): $optics_right \n Тип упаковки (правый глаз): $package_type_right \n Количество (правый глаз): $amount_right \n\n Цена: $price грн.") ;
 
 	// init error message
 	$errmsg='';
