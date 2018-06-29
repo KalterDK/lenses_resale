@@ -1116,9 +1116,9 @@ $(document).ready(function() {
         return false;
     });
 
-    var price_1 = $('.total_price span').text();
+    var price_1 = $('#price-1').text();
     $('#total_price_input-1').val(price_1);
 
-    var price_2 = $('.total_price span').text();
+    var price_2 = $('#price-2').text();
     $('#total_price_input-2').val(price_2);
 });
