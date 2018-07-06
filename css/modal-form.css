@@ -1,6 +1,6 @@
 #modal_form {
-	width: 800px;
-	height: 120px;
+	width: 300px;
+	height: auto;
 	border-radius: 5px;
 	border: 1px #1a57bf solid;
 	background: #fff;
@@ -17,15 +17,15 @@
 	width: 21px;
 	height: 21px;
 	position: absolute;
-	top: 10px;
-	right: 10px;
+	top: 1px;
+	right: 1px;
 	cursor: pointer;
 	display: block;
 }
 
 #modal_form-2 {
-	width: 800px;
-	height: 120px;
+	width: 300px;
+	height: auto;
 	border-radius: 5px;
 	border: 1px #1a57bf solid;
 	background: #fff;
@@ -42,8 +42,8 @@
 	width: 21px;
 	height: 21px;
 	position: absolute;
-	top: 10px;
-	right: 10px;
+	top: 1px;
+	right: 1px;
 	cursor: pointer;
 	display: block;
 }
