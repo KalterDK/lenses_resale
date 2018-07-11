@@ -6,13 +6,13 @@ function prices_f_1() {
     var total = 0;
 
     if (amount_sum < 4) {
-        price = 149;
+        price = 145;
         total = amount_sum * price;
     } else if (3 < amount_sum < 7) {
-        price = 139;
+        price = 135;
         total = amount_sum * price;
     } else if (amount_sum > 6) {
-        price = 119;
+        price = 115;
         total = amount_sum * price;
     }
 
@@ -31,13 +31,13 @@ function prices_f_2() {
     var total = 0;
 
     if (amount_sum < 4) {
-        price = 149;
+        price = 145;
         total = amount_sum * price;
     } else if (3 < amount_sum < 7) {
-        price = 139;
+        price = 135;
         total = amount_sum * price;
     } else if (amount_sum > 6) {
-        price = 119;
+        price = 115;
         total = amount_sum * price;
     }
 
