@@ -20,7 +20,7 @@ $(document).ready(function() {
 		event.preventDefault();
 			$('#modal_form-2')
 				.css('display', 'block')
-				.animate({opacity: 1, top: '82%'}, 200);
+				.animate({opacity: 1, top: '75%'}, 200);
 	});
 	$('#modal_close-2, #submit-2').click( function(){
 		$('#modal_form-2')
