@@ -1,10 +1,11 @@
 <?php
 if(isset($_POST["action"])) {
 	$name = $_POST['name'];                 // Sender's name
-	$phone  = $_POST['phone'];              // Sender's phone number
+	$phone = $_POST['phone'];               // Sender's phone number
+	$city = $_POST['city'];                 // City
+	$post = $_POST['post'];                 // Post
 	$radius = $_POST['radius'];             // Radius
 	$optics = $_POST['optics'];             // Optics (Diopters)
-	$package_type = $_POST['package_type']; // Package Type
 	$amount = $_POST['amount'];             // Amount
 	$price = $_POST['total_price_input-1']; // Price
 
@@ -13,7 +14,7 @@ if(isset($_POST["action"])) {
 	$to = 'supermarketlinz@gmail.com';        // Recipient's email address
 	$subject = 'Order from Contact Form '; // Message title
 
-	$body = nl2br(" Имя: $name \n Телефон: $phone \n\n Радиус: $radius \n Оптическая сила: $optics \n Тип упаковки: $package_type \n Количество: $amount \n\n  Цена: $price грн.") ;
+	$body = nl2br(" Имя: $name \n Телефон: $phone \n Город: $city \n Отделение новой почты: $post \n\n Радиус: $radius \n Оптическая сила: $optics \n Количество: $amount \n\n  Цена: $price грн.") ;
 	
 	// init error message
 	$errmsg='';
@@ -24,6 +25,14 @@ if(isset($_POST["action"])) {
 	//Check if phone number has been entered
 	if ( isset($_POST['phone']) && $_POST['phone'] == '') {
 		$errmsg .= '<p>Пожалуйста укажите ваш номер телефона.</p>';
+	}
+	// Check if city has been entered
+	if (isset($_POST['city']) && $_POST['city'] == '') {
+		$errmsg .= '<p>Пожалуйста укажите ваш город.</p>';
+	}
+	//Check if post office has been entered
+	if ( isset($_POST['post']) && $_POST['post'] == '') {
+		$errmsg .= '<p>Пожалуйста укажите ваше отделение новой почты.</p>';
 	}
 
 	$result='';
